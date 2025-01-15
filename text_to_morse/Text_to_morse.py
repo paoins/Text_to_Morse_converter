@@ -1,3 +1,5 @@
+import audio
+
 # define each letter and it equivalent on morse
 morse_code_dict = {
     'A': '.-',    'B': '-...',  'C': '-.-.',  'D': '-..',   'E': '.',
@@ -44,6 +46,8 @@ def morse_to_text(morse_code):
 name=input('Enter your name: ')
 morse= text_to_morse(name)
 print(morse)
+audio.create_morse_audio(morse)
+
 
 text = morse_to_text(morse)
 print(text)
